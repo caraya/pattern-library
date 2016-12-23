@@ -1,0 +1,24 @@
+{
+  "name": "pattern-lib",
+  "description": "sample pattern library written in Polymer",
+  "main": "index.html",
+  "authors": [
+    "Carlos Araya <carlos.araya@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "pattern",
+    "library",
+    "polymer",
+    "web-components"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
