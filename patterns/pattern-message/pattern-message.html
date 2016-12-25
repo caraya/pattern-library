@@ -1,0 +1,58 @@
+<link rel="import" href="../../elements.html">
+
+<dom-module id="pattern-message-danger">
+
+    <template>
+        <!--<style include="pattern-shared-style"></style>-->
+        <!--<style is="custom-style">-->
+            <!--:host(.message) {-->
+                <!--border: 1px solid black;-->
+                <!--display: block;-->
+                <!--background-color: lightgrey;-->
+                <!--font-weight: bold;-->
+            <!--}-->
+
+            <!--:host(.info) {-->
+                <!--border: 1px solid black;-->
+                <!--display: block;-->
+                <!--background-color: lightblue;-->
+                <!--font-weight: bold;-->
+            <!--}-->
+
+            <!--:host(.warning) {-->
+                <!--border: 1px solid black;-->
+                <!--display: block;-->
+                <!--background-color: lightyellow;-->
+                <!--font-weight: bold;-->
+            <!--}-->
+
+            <!--:host(.danger) {-->
+                <!--border: 1px solid black;-->
+                <!--display: block;-->
+                <!--background-color: indianred;-->
+                <!--font-weight: bold;-->
+            <!--}-->
+        <!--</style>-->
+
+        <div class="{{level}}" title="{{title}}">
+            <div class="content-wrapper"><content></content></div>
+        </div>
+
+
+    </template>
+
+    <script>
+        Polymer({
+            is: 'pattern-message-danger',
+
+            properties: {
+                title: {
+                    type: String
+                }
+            }
+
+
+        });
+    </script>
+
+</dom-module>

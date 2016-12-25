@@ -4,10 +4,52 @@
     <meta charset="UTF-8">
     <title>Pattern Library Demo</title>
 
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-
+    <link rel="import" href="elements.html">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<div class="container">
+
+    <header>
+        <h1>Web Component based pattern library </h1>
+        <h2>Version 1</h2>
+    </header>
+
+    <p>This is the initial version of the pattern library. The structure of the patterns is defined in custom Polymer elements while the styles are defined in a master CSS file. I hope to get the styles moved inside the patterns themselves but for now I want to get the patterns working. For a production application we will either use the patterns as-is and compose our templates and pages.</p>
+
+    <section>
+        <h2>Fonts</h2>
+
+
+    </section>
+
+    <section>
+        <h2>Messages</h2>
+
+        <pattern-message class="message">
+            <p>Echo</p>
+        </pattern-message>
+
+        <pattern-message class="message message-info">
+            <p>Echo</p>
+        </pattern-message>
+
+        <pattern-message class="message message-warning">
+            <p>Cuidado</p>
+        </pattern-message>
+
+        <pattern-message class="message message-danger">
+            <p>Do not push the red button...</p>
+        </pattern-message>
+l
+    </section>
+
+</div>
+
+<!-- Load scripts -->
+<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<script src="scripts/vendor/fontfaceobserver.js"></script>
+<script src="scripts/load-fonts.js"></script>
 
 </body>
 </html>

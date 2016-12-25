@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+```html
+<dom-module id="pattern-3-columns">
+
+    <template>
+
+        <style>
+            :host() {
+                display: block;
+            }
+        </style>
+
+        <pattern-search title="This one is green."></pattern-search>
+        <pattern-search title="This one is green too."></pattern-search>
+
+        <pattern-search class="warning" title="This one is red."></pattern-search>
+
+    </template>
+
+    <script>
+        Polymer({ is: 'pattern-3-columns'});
+    </script>
+
+</dom-module>
