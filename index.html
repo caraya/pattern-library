@@ -5,17 +5,184 @@
     <title>Pattern Library Demo</title>
 
     <link rel="import" href="elements.html">
-    <link rel="stylesheet" href="css/styles.css">
+    <style is="custom-style">
+        @font-face {
+            font-family: "inconsolata";
+            src: url("fonts/inconsolata-regular-webfont.eot");
+            src: url("fonts/inconsolata-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/inconsolata-regular-webfont.woff2") format("woff2"), url("fonts/inconsolata-regular-webfont.woff") format("woff"), url("fonts/inconsolata-regular-webfont.ttf") format("truetype"), url("fonts/inconsolata-regular-webfont.svg#inconsolata_regular") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* Regular font */
+        @font-face {
+            font-family: "notosans_regular";
+            src: url("fonts/notosans-regular-webfont.eot");
+            src: url("fonts/notosans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/notosans-regular-webfont.woff2") format("woff2"), url("fonts/notosans-regular-webfont.woff") format("woff"), url("fonts/notosans-regular-webfont.ttf") format("truetype"), url("fonts/notosans-regular-webfont.svg#notosans_regular") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* Bold font */
+        @font-face {
+            font-family: "notosans_bold";
+            src: url("fonts/notosans-bold-webfont.eot");
+            src: url("fonts/notosans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/notosans-bold-webfont.woff2") format("woff2"), url("fonts/notosans-bold-webfont.woff") format("woff"), url("fonts/notosans-bold-webfont.ttf") format("truetype"), url("fonts/notosans-bold-webfont.svg#notosans_bold") format("svg");
+            font-weight: 700;
+            font-style: normal;
+        }
+        /* Italic Font */
+        @font-face {
+            font-family: "notosans_italics";
+            src: url("fonts/notosans-italic-webfont.eot");
+            src: url("fonts/notosans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/notosans-italic-webfont.woff2") format("woff2"), url("fonts/notosans-italic-webfont.woff") format("woff"), url("fonts/notosans-italic-webfont.ttf") format("truetype"), url("fonts/notosans-italic-webfont.svg#notosans_italics") format("svg");
+            font-weight: normal;
+            font-style: italic;
+        }
+        /* bold-italic font */
+        @font-face {
+            font-family: "notosans_bolditalic";
+            src: url("fonts/notosans-bolditalic-webfont.eot");
+            src: url("fonts/notosans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/notosans-bolditalic-webfont.woff2") format("woff2"), url("fonts/notosans-bolditalic-webfont.woff") format("woff"), url("fonts/notosans-bolditalic-webfont.ttf") format("truetype"), url("fonts/notosans-bolditalic-webfont.svg#notosans_bolditalic") format("svg");
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.375;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        /* This will match if the fonts failed to load. It is identical to the default but doesn't have to be*/
+        .fonts-failed body {
+            font-family: Verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.375;
+        }
+
+        /* This will match when fonts load successfully */
+        .fonts-loaded body {
+            font-family: notosans_regular, verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.375;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: inconsolata, sans-serif;
+        }
+
+        h1 {
+            font-size: 3em;
+            line-height: 1.05;
+        }
+        @media screen and (min-width: 37.5em) and (max-width: 50em) and (-webkit-min-device-pixel-ratio: 1) {
+            h1 {
+                font-size: 2.5em;
+                line-height: 1.125;
+            }
+        }
+        @media screen and (min-width: 20em) and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 1) {
+            h1 {
+                font-size: 2em;
+                line-height: 1.25;
+            }
+        }
+
+        h2 {
+            font-size: 2.25em;
+            line-height: 1.25;
+        }
+        @media screen and (min-width: 37.5em) and (max-width: 50em) and (-webkit-min-device-pixel-ratio: 1) {
+            h2 {
+                font-size: 2em;
+                line-height: 1.25;
+            }
+        }
+        @media screen and (min-width: 20em) and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 1) {
+            h2 {
+                font-size: 1.625em;
+                line-height: 1.15384615;
+            }
+        }
+
+        h3 {
+            font-size: 1.75em;
+            line-height: 1.25;
+        }
+        @media screen and (min-width: 37.5em) and (max-width: 50em) and (-webkit-min-device-pixel-ratio: 1) {
+            h3 {
+                font-size: 1.5em;
+                line-height: 1.25;
+            }
+        }
+        @media screen and (min-width: 20em) and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 1) {
+            h3 {
+                font-size: 1.375em;
+                line-height: 1.13636364;
+            }
+        }
+
+        h4 {
+            font-size: 1.125em;
+            line-height: 1.25;
+        }
+        @media screen and (min-width: 37.5em) and (max-width: 50em) and (-webkit-min-device-pixel-ratio: 1) {
+            h4 {
+                font-size: 1.125em;
+                line-height: 1.222222;
+            }
+        }
+        @media screen and (min-width: 20em) and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 1) {
+            h4 {
+                font-size: 1.125em;
+                line-height: 1.111111;
+            }
+        }
+
+        h5 {
+            font-size: 2.61803em;
+            line-height: 1.25;
+        }
+
+        h6 {
+            font-size: 1.61803em;
+            line-height: 1.25;
+        }
+
+
+        em,
+        i {
+            font-family: notosans_italic, cursive;
+        }
+
+        em em {
+            font-family: notosans_regular, verdana, sans-serif;
+        }
+
+        strong,
+        b {
+            font-family: notosans_bold, sans-serif;
+        }
+
+        strong em,
+        em, strong {
+            font-family: notosans_bolditalic, sans-serif;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
 
     <header>
         <h1>Web Component based pattern library </h1>
-        <h2>Version 1</h2>
+        <h2>Version 2</h2>
     </header>
 
-    <p>This is the initial version of the pattern library. The structure of the patterns is defined in custom Polymer elements while the styles are defined in a master CSS file. I hope to get the styles moved inside the patterns themselves but for now I want to get the patterns working. For a production application we will either use the patterns as-is and compose our templates and pages.</p>
+    <p>This is version 2 of the pattern library. In this version I'm trying to move the CSS to individual components. This may require some Polymer magic to make them work; I'll try to document the Polymer specific tricks where possible.</p>
 
     <section>
         <h2>Fonts</h2>
