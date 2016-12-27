@@ -1,0 +1,33 @@
+<link rel="import" href="../../elements.html">
+
+<dom-module id="pattern-columns">
+
+    <style>
+        :host {
+            display: block;
+        }
+    </style>
+    <template>
+
+        <div class="cols-{{columns}}">
+            <div class="content-wrapper"><content></content></div>
+        </div>
+
+    </template>
+    <script>
+        Polymer({
+            is: 'pattern-columns',
+            properties: {
+                columns: {
+                    type: Number,
+                    value: 2
+                }
+            }
+
+        });
+    </script>
+</dom-module>
+
+
+
+</dom-module>
