@@ -52,6 +52,8 @@ body {
     width: 80%;
 }
 
+
+
 /* This will match if the fonts failed to load. It is identical to the default but doesn't have to be*/
 .fonts-failed body {
     font-family: Verdana, sans-serif;
@@ -195,5 +197,90 @@ em, strong {
 }
 
 /* Multi column */
+/* Column predefined classes */
+.cols-2 {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 2em;
+    column-count: 2;
+    column-gap: 2em;
+    column-fill: balance;
+    column-span: none;
+}
+
+.cols-3 {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 1em;
+    column-count: 3;
+    column-gap: 1em;
+    column-fill: balance;
+    column-span: none;
+}
+
+/* video */
+.video {
+    height: 0;
+    margin-bottom: 4em;
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video p {
+    color: #999;
+    font-size: 80%;
+    max-width: 100%;
+}
+
+/* figures */
+/* reset figure counter whenever you find a .container or an article */
+.container,
+article {
+    counter-reset: figure_count;
+}
+
+.figure figure {
+    counter-increment: figure_count;
+    margin: 2em auto;
+    /* is this correct */
+    width: max-content;
+}
+
+.figure figure img {
+    max-width: 100%;
+}
+
+.figure figcaption {
+    color: #999;
+    font-size: 80%;
+    max-width: 100%;
+}
+
+/* Automatically add the figure number and associated text */
+.figure figcaption:before {
+    content: "Figure " counter(figure_count) ": ";
+}
 
 
+/* Blockquotes*/
+.blockquote blockquote {
+    font-size: 1.5em;
+    line-height: 1.458333;
+    border-left: 0.5em solid #607d8b;
+    padding-left: 1.5em;
+}
+
+@media screen and (min-width: 20em) and (max-width: 37.5em) {
+    .blockquote blockquote {
+        font-size: 1.25em;
+        line-height: 1.25;
+    }
+}

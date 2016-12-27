@@ -1,0 +1,32 @@
+<link rel="import" href="../../elements.html">
+
+<dom-module id="pattern-video">
+    <style>
+        :host {
+            display: block;
+        }
+    </style>
+
+    <template>
+        <div class="video">
+            <div class="content-wrapper"><content></content></div>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'pattern-video',
+
+            properties: {
+                title: {
+                    type: String
+                },
+                level: {
+                    type: String
+                }
+            }
+
+
+        });
+    </script>
+</dom-module>
