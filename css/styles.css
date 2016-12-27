@@ -247,31 +247,29 @@ article {
     counter-reset: figure_count;
 }
 
-.figure figure {
+figure {
     counter-increment: figure_count;
+    max-width: min-content;
     margin: 2em auto;
-    /* is this correct */
-    width: max-content;
 }
 
-.figure figure img {
-    max-width: 100%;
+figure > img {
+    max-width: inherit
 }
 
-.figure figcaption {
+figcaption {
     color: #999;
     font-size: 80%;
-    max-width: 100%;
 }
 
 /* Automatically add the figure number and associated text */
-.figure figcaption:before {
+figcaption:before {
     content: "Figure " counter(figure_count) ": ";
 }
 
 
 /* Blockquotes*/
-.blockquote blockquote {
+blockquote {
     font-size: 1.5em;
     line-height: 1.458333;
     border-left: 0.5em solid #607d8b;
@@ -279,7 +277,7 @@ article {
 }
 
 @media screen and (min-width: 20em) and (max-width: 37.5em) {
-    .blockquote blockquote {
+    blockquote {
         font-size: 1.25em;
         line-height: 1.25;
     }
