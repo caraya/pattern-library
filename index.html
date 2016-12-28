@@ -4,50 +4,15 @@
     <meta charset="UTF-8">
     <title>Pattern Library Demo</title>
 
-    <link rel="import" href="elements.html">
-    <style is="custom-style">
-        @font-face {
-            font-family: "inconsolata";
-            src: url("fonts/inconsolata-regular-webfont.eot");
-            src: url("fonts/inconsolata-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/inconsolata-regular-webfont.woff2") format("woff2"), url("fonts/inconsolata-regular-webfont.woff") format("woff"), url("fonts/inconsolata-regular-webfont.ttf") format("truetype"), url("fonts/inconsolata-regular-webfont.svg#inconsolata_regular") format("svg");
-            font-weight: normal;
-            font-style: normal;
-        }
-        /* Regular font */
-        @font-face {
-            font-family: "notosans_regular";
-            src: url("fonts/notosans-regular-webfont.eot");
-            src: url("fonts/notosans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/notosans-regular-webfont.woff2") format("woff2"), url("fonts/notosans-regular-webfont.woff") format("woff"), url("fonts/notosans-regular-webfont.ttf") format("truetype"), url("fonts/notosans-regular-webfont.svg#notosans_regular") format("svg");
-            font-weight: normal;
-            font-style: normal;
-        }
-        /* Bold font */
-        @font-face {
-            font-family: "notosans_bold";
-            src: url("fonts/notosans-bold-webfont.eot");
-            src: url("fonts/notosans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/notosans-bold-webfont.woff2") format("woff2"), url("fonts/notosans-bold-webfont.woff") format("woff"), url("fonts/notosans-bold-webfont.ttf") format("truetype"), url("fonts/notosans-bold-webfont.svg#notosans_bold") format("svg");
-            font-weight: 700;
-            font-style: normal;
-        }
-        /* Italic Font */
-        @font-face {
-            font-family: "notosans_italics";
-            src: url("fonts/notosans-italic-webfont.eot");
-            src: url("fonts/notosans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/notosans-italic-webfont.woff2") format("woff2"), url("fonts/notosans-italic-webfont.woff") format("woff"), url("fonts/notosans-italic-webfont.ttf") format("truetype"), url("fonts/notosans-italic-webfont.svg#notosans_italics") format("svg");
-            font-weight: normal;
-            font-style: italic;
-        }
-        /* bold-italic font */
-        @font-face {
-            font-family: "notosans_bolditalic";
-            src: url("fonts/notosans-bolditalic-webfont.eot");
-            src: url("fonts/notosans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/notosans-bolditalic-webfont.woff2") format("woff2"), url("fonts/notosans-bolditalic-webfont.woff") format("woff"), url("fonts/notosans-bolditalic-webfont.ttf") format("truetype"), url("fonts/notosans-bolditalic-webfont.svg#notosans_bolditalic") format("svg");
-            font-weight: 700;
-            font-style: italic;
-        }
-
+    <!-- First include Polymer -->
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="patterns/patterns.html">
+    <style>
+        @link url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
+        @link url('https://fonts.googleapis.com/css?family=Inconsolata');
+        /* Default body style */
         body {
-            font-family: Verdana, sans-serif;
+            font-family: 'Noto Sans', verdana, sans-serif;
             font-size: 16px;
             line-height: 1.375;
         }
@@ -57,22 +22,8 @@
             width: 80%;
         }
 
-        /* This will match if the fonts failed to load. It is identical to the default but doesn't have to be*/
-        .fonts-failed body {
-            font-family: Verdana, sans-serif;
-            font-size: 16px;
-            line-height: 1.375;
-        }
-
-        /* This will match when fonts load successfully */
-        .fonts-loaded body {
-            font-family: notosans_regular, verdana, sans-serif;
-            font-size: 16px;
-            line-height: 1.375;
-        }
-
         h1, h2, h3, h4, h5, h6 {
-            font-family: inconsolata, sans-serif;
+            font-family: 'Inconsolata', serif;
         }
 
         h1 {
@@ -156,21 +107,26 @@
 
         em,
         i {
-            font-family: notosans_italic, cursive;
+            font-family: 'Noto Sans', cursive;
+            font-style: italic;
         }
 
         em em {
-            font-family: notosans_regular, verdana, sans-serif;
+            font-family: 'Noto Sans', verdana, sans-serif;
+            font-style: normal;
         }
 
         strong,
         b {
-            font-family: notosans_bold, sans-serif;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 700;
         }
 
         strong em,
         em, strong {
             font-family: notosans_bolditalic, sans-serif;
+            font-style: italic;
+            font-weight: 700;
         }
     </style>
 </head>
@@ -260,15 +216,15 @@
             <p>Echo</p>
         </pattern-message>
 
-        <pattern-message class="message message-info">
+        <pattern-message class="message-info">
             <p>Echo</p>
         </pattern-message>
 
-        <pattern-message class="message message-warning">
+        <pattern-message class="message-warning">
             <p>Cuidado</p>
         </pattern-message>
 
-        <pattern-message class="message message-danger">
+        <pattern-message class="message-danger">
             <p>Do not push the red button...</p>
         </pattern-message>
     </section>
@@ -282,14 +238,14 @@
         <p> From <a href="https://vimeo.com/">Vimeo</a></p>
 
         <pattern-video class="video">
-            <iframe src="https://player.vimeo.com/video/112282165?byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/112282165?byline=0&portrait=0" width="560" height="312" frameborder="0" allowfullscreen></iframe>
         </pattern-video>
 
 
         <p>From <a href="https://www.youtube.com/">Youtube</a></p>
 
         <pattern-video class="video">
-            <iframe src="https://www.youtube.com/embed/qn4eWlOGwDM?rel=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EFbuID1QG0Y?rel=0" frameborder="0" allowfullscreen></iframe>
         </pattern-video>
     </section>
 
@@ -324,19 +280,33 @@
     <section>
         <h2>Blockquote</h2>
 
-        <pattern-blockquote>
-            <blockquote>
+        <pattern-blockquote class="blockquote">
                 <p>I don't know where you find courage. There isn't a map. It kinda follows the road of emotion. Sometimes stopping your conviction and anger. Other times parking beside fear. Courage plays no favorites; takes no sides. It can be as impressive as a walk on Venus, or as simple as a kiss. And sometimes in our darkest hours, courage is all we have.</p>
                 <cite>Defying Gravity -- Episode 13</cite>
-            </blockquote>
         </pattern-blockquote>
+    </section>
+
+    <section>
+        <h2>Fenced code blocks</h2>
+
+        <p>We use the <a href="https://elements.polymer-project.org/elements/prism-element">prism-demo</a> element from the Polymer Project to style our code. The syntax of the element is complicated. Something like this:</p>
+
+        <prism-demo lang="markup" code="<prism-demo lang='html' code='your code goes here'></prism-demo>"></prism-demo>
+
+        <p>Longer examples get more complicated with the attribute syntax</p>
+        <prism-demo lang="html" code="<pattern-blockquote>
+    <p>I don't know where you find courage. There isn't a map. It kinda follows the road of emotion.
+    Sometimes stopping your conviction and anger. Other times parking beside fear. Courage plays no favorites;
+    takes no sides. It can be as impressive as a walk on Venus, or as simple as a kiss. And sometimes in our
+    darkest hours, courage is all we have.</p>
+    <cite>Defying Gravity -- Episode 13</cite>
+</pattern-blockquote>"></prism-demo>
+
     </section>
 </div>
 
 <!-- Load scripts -->
 <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-<script src="scripts/vendor/fontfaceobserver.js"></script>
-<script src="scripts/load-fonts.js"></script>
 
 </body>
 </html>

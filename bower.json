@@ -20,5 +20,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "prism-element": "polymerElements/prism-element#^1.2.0",
+    "marked-element": "polymerelements/marked-element#^1.2.0"
+  }
 }

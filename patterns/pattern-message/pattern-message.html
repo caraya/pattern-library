@@ -1,59 +1,30 @@
-<link rel="import" href="../../elements.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <dom-module id="pattern-message-danger">
+    <style is="custom-style">
+        :host {
+            display: block;
+        }
+
+        :host(.message) {
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+    </style>
 
     <template>
-        <!--<style include="pattern-shared-style"></style>-->
-        <!--<style is="custom-style">-->
-            <!--:host(.message) {-->
-                <!--border: 1px solid black;-->
-                <!--display: block;-->
-                <!--background-color: lightgrey;-->
-                <!--font-weight: bold;-->
-            <!--}-->
-
-            <!--:host(.info) {-->
-                <!--border: 1px solid black;-->
-                <!--display: block;-->
-                <!--background-color: lightblue;-->
-                <!--font-weight: bold;-->
-            <!--}-->
-
-            <!--:host(.warning) {-->
-                <!--border: 1px solid black;-->
-                <!--display: block;-->
-                <!--background-color: lightyellow;-->
-                <!--font-weight: bold;-->
-            <!--}-->
-
-            <!--:host(.danger) {-->
-                <!--border: 1px solid black;-->
-                <!--display: block;-->
-                <!--background-color: indianred;-->
-                <!--font-weight: bold;-->
-            <!--}-->
-        <!--</style>-->
-
-        <div class="{{level}}" title="{{title}}">
-            <h2>{{title}}</h2>
+        <div class="message">
             <div class="content-wrapper"><content></content></div>
         </div>
-
-
     </template>
 
     <script>
         Polymer({
             is: 'pattern-message-danger',
 
-            properties: {
-            title: {
-                type: String
-            },
-            level: {
-                type: String
-            }
-        }
+            properties: {}
 
 
         });
